@@ -1,3 +1,27 @@
+# Instalation
+
+```
+chmod +x build.sh
+bash build.sh
+```
+STATUS: -NOT-DEFINED-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # CH341SER driver
 
 1. [About driver](#about-driver)  
