@@ -1,10 +1,10 @@
-# Instalation
+# Installation
 
 ```
 chmod +x build.sh
 bash build.sh
 ```
-STATUS: -NOT-DEFINED-
+STATUS: STABLE
 
 
 
