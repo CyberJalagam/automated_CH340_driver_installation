@@ -36,15 +36,46 @@ fi
   sudo make load
   sudo rmmod ch341
   lsmod | grep ch34
-  sleep 10   
   echo -e "\n=============== Unplug and Plug your CH340 Device========================\n"
   echo -e "\n=========================================================================\n"
-  echo -e "\n====================Wait time: 15 seconds================================\n"
-  sleep 15
-  dmesg
-  echo -e "\n=============== Drivers Installed, Applying Permissions===================\n"
-  sudo usermod -a -G dialout $username 
-  sudo chmod a+rw /dev/ttyUSB0
-  echo -e "\n======================= Installation Done =================================\n"
-  echo -e "\n================= ©2020 RB INTERNATIONAL NETWORK ==========================\n"
+  read -p "Please press Y to proceed " -n 1 -r
+  if [[ ! $REPLY =~ ^[Yy]$ ]]
+  then
+      echo -e "\n============= Wait Time Activated- 30 seconds ===================\n"
+      sleep 30
+      dmesg
+      echo -e "\n=============== Check if you get the below result on the output given above ===================\n"
+      echo -e "[  xxx] ch34x ttyUSB0: ch34x converter now disconnected from ttyUSB0"
+      echo -e "[  xxx] ch34x 3-2:1.0: device disconnected"
+      read -p "Please press Y if the output is same ( only on the last 2 lines) " -n 1 -r
+      if [[ ! $REPLY =~ ^[Yy]$ ]]
+      then
+          echo -e " You have done something wrong "
+          echo -e " Installation Aborted "
+          exit     
+      fi
+        echo -e "\n=============== Drivers Installed, Applying Permissions===================\n"
+        sudo usermod -a -G dialout $username 
+        sudo chmod a+rw /dev/ttyUSB0
+        echo -e "\n======================= Installation Done =================================\n"
+        echo -e "\n================= ©2020 RB INTERNATIONAL NETWORK ==========================\n"
+        exit
+  fi
+      dmesg
+      echo -e "\n=============== Check if you get the below result on the output given above ===================\n"
+      echo -e "[  xxx] ch34x ttyUSB0: ch34x converter now disconnected from ttyUSB0"
+      echo -e "[  xxx] ch34x 3-2:1.0: device disconnected"
+      read -p "Please press Y if the output is same ( only on the last 2 lines) " -n 1 -r
+      if [[ ! $REPLY =~ ^[Yy]$ ]]
+      then
+          echo -e " You have done something wrong "
+          echo -e " Installation Aborted "
+          exit     
+      fi
+        echo -e "\n=============== Drivers Installed, Applying Permissions===================\n"
+        sudo usermod -a -G dialout $username 
+        sudo chmod a+rw /dev/ttyUSB0
+        echo -e "\n======================= Installation Done =================================\n"
+        echo -e "\n================= ©2020 RB INTERNATIONAL NETWORK ==========================\n"
+        exit
 
