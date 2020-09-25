@@ -44,10 +44,13 @@ fi
       if [[ ! $REPLY =~ ^[Yy]$ ]]
       then
           echo -e "\n==================================== You have done something wrong ========================================================\n"
-          echo -e "\n====================================== Force Pushing Premissions ==========================================================\n"
+          echo -e "\n====================================== Force Pushing Premissions ==========================================================\n"       
           USERNAME=`whoami`
           sudo usermod -aG dialout "$USERNAME" 
           sudo chmod a+rw /dev/ttyUSB0
+          echo -e "\n============================================ Installation Done ==============================================================\n"
+          echo -e "\n====================================== ©2020 RB INTERNATIONAL NETWORK =======================================================\n"
+        
           exit     
       fi
         USERNAME=`whoami`
@@ -70,6 +73,9 @@ fi
           USERNAME=`whoami`
           sudo usermod -aG dialout "$USERNAME" 
           sudo chmod a+rw /dev/ttyUSB0
+          echo -e "\n============================================ Installation Done ==============================================================\n"
+          echo -e "\n===================================== ©2020 RB INTERNATIONAL NETWORK ========================================================\n"
+        
           exit     
       fi
         USERNAME=`whoami`
@@ -77,6 +83,6 @@ fi
         sudo usermod -aG dialout "$USERNAME" 
         sudo chmod a+rw /dev/ttyUSB0
         echo -e "\n============================================ Installation Done ==============================================================\n"
-        echo -e "\n==============----------------------=== ©2020 RB INTERNATIONAL NETWORK =========----------------------------=================\n"
+        echo -e "\n======================================= ©2020 RB INTERNATIONAL NETWORK ======================================================\n"
         exit
 
