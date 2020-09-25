@@ -54,8 +54,9 @@ fi
           echo -e " Installation Aborted "
           exit     
       fi
+        USERNAME=`whoami`
         echo -e "\n=============== Drivers Installed, Applying Permissions===================\n"
-        sudo usermod -aG dialout $username 
+        sudo usermod -aG dialout "$USERNAME" 
         sudo chmod a+rw /dev/ttyUSB0
         echo -e "\n======================= Installation Done =================================\n"
         echo -e "\n================= ©2020 RB INTERNATIONAL NETWORK ==========================\n"
@@ -72,8 +73,9 @@ fi
           echo -e " Installation Aborted "
           exit     
       fi
+        USERNAME=`whoami`
         echo -e "\n=============== Drivers Installed, Applying Permissions===================\n"
-        sudo usermod -aG dialout $username 
+        sudo usermod -aG dialout "$USERNAME" 
         sudo chmod a+rw /dev/ttyUSB0
         echo -e "\n======================= Installation Done =================================\n"
         echo -e "\n================= ©2020 RB INTERNATIONAL NETWORK ==========================\n"
