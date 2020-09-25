@@ -55,7 +55,7 @@ fi
           exit     
       fi
         echo -e "\n=============== Drivers Installed, Applying Permissions===================\n"
-        sudo usermod -a -G dialout $username 
+        sudo usermod -aG dialout $username 
         sudo chmod a+rw /dev/ttyUSB0
         echo -e "\n======================= Installation Done =================================\n"
         echo -e "\n================= ©2020 RB INTERNATIONAL NETWORK ==========================\n"
@@ -73,7 +73,7 @@ fi
           exit     
       fi
         echo -e "\n=============== Drivers Installed, Applying Permissions===================\n"
-        sudo usermod -a -G dialout $username 
+        sudo usermod -aG dialout $username 
         sudo chmod a+rw /dev/ttyUSB0
         echo -e "\n======================= Installation Done =================================\n"
         echo -e "\n================= ©2020 RB INTERNATIONAL NETWORK ==========================\n"
