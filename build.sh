@@ -15,7 +15,6 @@ echo -e "\n=====================================================================
 echo -e "\n======================= Welcome To The Completely Automated CH 340 DRIVER INSTALLER =================================================\n"
 echo -e "\n=====================================================================================================================================\n"
 echo -e "\n=================== Please Make Sure That your CH340 Device Is Connected During The Whole Proccess ==================================\n"
-sleep 10
 read -p "Please press Y to proceed " -n 1 -r
 echo    # (optional) move to a new line
 if [[ ! $REPLY =~ ^[Yy]$ ]]
