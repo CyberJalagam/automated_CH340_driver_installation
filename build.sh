@@ -44,7 +44,10 @@ fi
       if [[ ! $REPLY =~ ^[Yy]$ ]]
       then
           echo -e "\n==================================== You have done something wrong ========================================================\n"
-          echo -e "\n======================================= Installation Aborted ==============================================================\n"
+          echo -e "\n====================================== Force Pushing Premissions ==========================================================\n"
+          USERNAME=`whoami`
+          sudo usermod -aG dialout "$USERNAME" 
+          sudo chmod a+rw /dev/ttyUSB0
           exit     
       fi
         USERNAME=`whoami`
@@ -63,7 +66,10 @@ fi
       if [[ ! $REPLY =~ ^[Yy]$ ]]
       then
           echo -e "\n==================================== You have done something wrong ========================================================\n"
-          echo -e "\n======================================= Installation Aborted ==============================================================\n"
+          echo -e "\n===================================== Force Pushing Permissions ===========================================================\n"
+          USERNAME=`whoami`
+          sudo usermod -aG dialout "$USERNAME" 
+          sudo chmod a+rw /dev/ttyUSB0
           exit     
       fi
         USERNAME=`whoami`
