@@ -76,6 +76,8 @@ Tested on:
 * Arch Linux 4.11.3-1-ARCH
 * Linux Mint 19.3 Cinnamon
 * Ubuntu 18.04.5 LTS
+* Ubuntu 16.04 LTS
+* Ubuntu 20.04
 
 ## Official website
 
