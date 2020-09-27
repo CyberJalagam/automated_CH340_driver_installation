@@ -5,6 +5,8 @@ chmod +x build.sh
 bash build.sh
 ```
 STATUS: STABLE
+FINALIZED ? : YES
+
 
 
 
